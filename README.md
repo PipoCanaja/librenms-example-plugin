@@ -2,18 +2,12 @@ LibreNMS Example Plugin
 
 Info goes here :)
 
-Add this to LibreNMS composer.json for local development:
+Add the path to your plugin for local development (or deployment)
 
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../librenms-example-plugin",
-            "symlink": true
-        }
-    ]
+    composer config repositories.example-plugin '{"type": "path", "url": "/full/path/to/librenms-example-plugin", "symlink": true}'
 
 For users to use your plugin, you should publish it to packagist.org
 
 Then run:
 
-    lnms plugin:add "murrant/librenms-example-plugin @dev"
+    lnms plugin:add murrant/librenms-example-plugin @dev
