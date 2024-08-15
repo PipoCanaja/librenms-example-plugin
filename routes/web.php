@@ -6,5 +6,5 @@ use Murrant\LibrenmsExamplePlugin\Controllers\ImageController;
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::get('plugin/example-page', [ExamplePageController::class, 'index']);
-    Route::get('plugin/example-page/images/{image}', ImageController::class);
+    Route::get('plugin/example-page/images/{image}', ImageController::class)->name('example-plugin.image');
 });
